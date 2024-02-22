@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Card</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* Estilos para el botón */
+    .button {
+      position: absolute;
+      top: 50%;
+      left: calc(50% + 120px); /* Ajusta según sea necesario */
+      transform: translateY(-50%);
+      background-color: #ff6f61;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      z-index: 1; /* Coloca el botón delante de la tarjeta */
+    }
+
+    .button:hover {
+      background-color: #e6594c;
+    }
+  </style>
+    <style>
+		/* Estilos para el contenedor del GIF */
+		.gif-container {
+		  position: absolute;
+		  top: 50%;
+		  left: 10px; /* Ajusta según sea necesario para pegarlo al borde izquierdo */
+		  transform: translateY(-50%);
+		}
+	
+		/* Estilos para el GIF */
+		.gif {
+		  max-width: 400px; /* Ajusta según el tamaño del GIF */
+		  height: auto;
+		}
+	  </style>
+</head>
+<body>
+	<div class="gif-container">
+		<img src="jaz8.gif" alt="GIF" class="gif">
+	</div>
+
+<div class="card">
+    <div class="imgBox">
+        <div class="bark"></div>
+        <img src="https://image.ibb.co/fYzTrb/lastofus.jpg">
+    </div>
+    <div class="details">
+        <h4 class="color1">Jaz</h4>
+        <h4 class="color2 margin">(HAPPY BIRTHDAY)</h4>
+        <p>Jaz mivida feliz cumpleaños</p>
+        <p>esperamos que haya sido un</p>
+        <p>grandioso día para vos</p>
+        <p>Te deseamos lo mejor en tu día,</p>
+        <p>que lo hayas pasado genial hoy.</p>
+        <p>Que cada momento esté lleno de</p>
+        <p> sorpresas maravillosas</p>
+        <p>y sonrisas inolvidables.</p>
+        <p>Espero q recibas muchos regalitos y</p>
+        <p>comas mucho pastel.</p>
+        <p class="text-right">Happy Birthday</p>
+        <p class="text-right">♥RED</p>
+    </div>
+    <button class="button" id="playButton">Toca ❤️ </button>
+</div>
+
+<div>
+    <audio id="audio" src="jazi1.mp3" type="audio/mpeg"></audio>
+</div>
+
+<script>
+    // Función para reproducir la música al hacer clic en el botón "Toca <3"
+    document.getElementById('playButton').addEventListener('click', function() {
+        var audio = document.getElementById('audio');
+        audio.play();
+    });
+</script>
+<script defer src="https://app.embed.im/snow.js"></script> 
+<div id="photo-container">
+	<img src="jaz2.png" alt="Tu Foto">
+	<img src="jaz3.png" alt="Tu Foto">
+	<img src="jaz4.png" alt="Tu Foto">
+  </div>
+  <style>
+	#photo-container {
+	  display: flex; /* Utiliza flexbox */
+	  flex-direction: column; /* Dirección de los elementos: columna */
+	  align-items: center; /* Centra horizontalmente los elementos */
+	  position: fixed;
+	  top: 50%;
+	  right: 20px;
+	  transform: translateY(-50%);
+	  z-index: 9999; /* Asegura que la foto esté por encima de otros elementos */
+	}
+  
+	#photo-container img {
+	  width: 250px; /* Tamaño de todas las imágenes */
+	  height: 250px; /* Tamaño de todas las imágenes */
+	  margin-bottom: -40px; /* Espacio entre las imágenes */
+	  border-radius: 50%; /* Crea bordes redondeados para las imágenes */
+	}
+  </style>
+</body>
+</html>
